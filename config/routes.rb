@@ -5,4 +5,7 @@ Rails.application.routes.draw do
       resources :accounts, only: [:index, :create, :destroy, :update]
     end
   end
+
+  root to: 'site#index'
+  
 end
