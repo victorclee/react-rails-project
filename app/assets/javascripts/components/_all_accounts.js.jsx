@@ -1,4 +1,3 @@
-
 const AllAccounts = (props) => {
 var accounts = props.accounts.map((account) => {
     return(
