@@ -29,3 +29,6 @@ Rails 5.2.2
 
 * Things I learned 
 * .js.jsx is like Rails .erb partials
+
+Components and props
+State and lifecycle

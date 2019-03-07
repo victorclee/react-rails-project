@@ -2,7 +2,7 @@ const Main = (props) => {
     return(
       <div>
         <Header />
-        <AllAccounts />
+        <Body />
       </div>
     )
 }
