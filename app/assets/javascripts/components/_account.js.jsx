@@ -7,7 +7,7 @@ class Account extends React.Component{
         <p>{this.props.account.bank_address}</p>
         <p>{this.props.account.routing_number}</p>
         <p>{this.props.account.account_number}</p>
-        <button onClick={() => this.props.handleDelete()}>Delete</button>
+        <button  onClick={() => this.props.handleDelete(this.props.account.id)}>Delete</button>
       </div>
     )      
   }

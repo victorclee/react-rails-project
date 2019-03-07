@@ -7,9 +7,29 @@ constructor(props) {
     };
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
     this.addNewAccount = this.addNewAccount.bind(this)
+    this.handleDelete = this.handleDelete.bind(this)
+    this.deleteAccount = this.deleteAccount.bind(this)
   }
 
+  handleDelete(id){
+    fetch(`http://localhost:3000/api/v1/accounts/${id}`, 
+    {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then((response) => { 
+        this.deleteAccount(id)
+      })
+  }  
 
+
+deleteAccount(id){
+    newAccounts = this.state.accounts.filter((account) => account.id !== id)
+    this.setState({
+      accounts: newAccounts
+    })
+  }
 
 
 
@@ -46,7 +66,7 @@ render(){
     return(
       <div>
         <NewAccount handleFormSubmit={this.handleFormSubmit}/>
-        <AllAccounts accounts={this.state.accounts} />
+        <AllAccounts accounts={this.state.accounts} handleDelete={this.handleDelete}/>
       </div>
     )
   }
