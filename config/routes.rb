@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     end
   end
 
-  root to: 'site#index'
+  root to: 'home#index'
   
 end

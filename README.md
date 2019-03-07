@@ -26,4 +26,6 @@ Rails 5.2.2
 
 * Deployment instructions
 
-* ...
+
+* Things I learned 
+* .js.jsx is like Rails .erb partials
