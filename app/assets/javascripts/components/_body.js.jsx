@@ -48,6 +48,8 @@ fetch('http://localhost:3000/api/v1/accounts', {
   })
   
 }
+
+
 addNewAccount(account){
   this.setState({
     accounts: this.state.accounts.concat(account)

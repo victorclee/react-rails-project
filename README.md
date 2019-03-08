@@ -32,3 +32,10 @@ Rails 5.2.2
 
 Components and props
 State and lifecycle
+
+Stateful vs Stateless
+
+Resources used:
+https://medium.com/quick-code/simple-rails-crud-app-with-react-frontend-using-react-rails-gem-b708b89a9419
+https://medium.com/teamsubchannel/react-component-patterns-e7fb75be7bb0
+https://www.youtube.com/watch?v=YaZg8wg39QQ
