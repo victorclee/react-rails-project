@@ -5,7 +5,16 @@ constructor(props){
     this.state = {
       editable: false
     }
+    this.handleEdit = this.handleEdit.bind(this)
   }
+
+
+  handleEdit(){
+    this.setState({
+      editable: !this.state.editable
+    })
+  }
+
   
   render(){
 
@@ -26,9 +35,24 @@ constructor(props){
         {bank_address}
         {routing_number}
         {account_number}
-        <button>{this.state.editable? 'Submit' : 'Edit'}</button>
-        <button  onClick={() => this.props.handleDelete(this.props.account.id)}>Delete</button>
+        <button onClick={() => this.handleEdit()}>{this.state.editable? 'Submit' : 'Edit'}</button>
+        <button onClick={() => this.props.handleDelete(this.props.account.id)}>Delete</button>
       </div>
     )      
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
