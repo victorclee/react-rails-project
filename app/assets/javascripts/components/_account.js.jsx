@@ -10,6 +10,17 @@ constructor(props){
 
 
   handleEdit(){
+
+   if(this.state.editable){
+      let bank_nickname = this.bank_nickname.value
+      let bank_address = this.bank_address.value
+      let routing_number = this.routing_number.value
+      let account_number = this.account_number.value
+      let id = this.props.account.id
+      let account = {id: id, bank_nickname: bank_nickname, bank_address: bank_address, routing_number: routing_number, account_number: account_number}
+      this.props.handleUpdate(account)
+    }
+
     this.setState({
       editable: !this.state.editable
     })
