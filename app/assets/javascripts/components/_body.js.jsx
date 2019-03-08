@@ -16,7 +16,7 @@ constructor(props) {
 
 
   handleUpdate(account){
-    fetch(`http://localhost:3000/api/v1/accounts/${account.id}`, 
+    fetch(`/api/v1/accounts/${account.id}`, 
     {
       method: 'PUT',
       body: JSON.stringify({account: account}),
@@ -36,7 +36,7 @@ constructor(props) {
   }  
 
   handleDelete(id){
-    fetch(`http://localhost:3000/api/v1/accounts/${id}`, 
+    fetch(`/api/v1/accounts/${id}`, 
     {
       method: 'DELETE',
       headers: {
@@ -60,7 +60,7 @@ deleteAccount(id){
 
 handleFormSubmit(routing_number, account_number, bank_address, bank_nickname){
   let body = JSON.stringify({account: {routing_number: routing_number, account_number: account_number, bank_address: bank_address, bank_nickname: bank_nickname} })
-fetch('http://localhost:3000/api/v1/accounts', {
+fetch('/api/v1/accounts', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
