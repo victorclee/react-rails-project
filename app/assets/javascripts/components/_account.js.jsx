@@ -29,17 +29,11 @@ constructor(props){
   
   render(){
 
-    let bank_nickname = this.state.editable ? <input type='text' ref={input => this.bank_nickname = input} defaultValue={this.props.fruit.bank_nickname}/>:<h3>{this.props.fruit.bank_nickname}</h3>
-    let bank_address = this.state.editable ? <input type='text' ref={input => this.bank_address = input} defaultValue={this.props.fruit.bank_address}/>:<p>{this.props.fruit.bank_address}</p>
-    let routing_number = this.state.editable ? <input type='text' ref={input => this.routing_number = input} defaultValue={this.props.fruit.routing_number}/>:<p>{this.props.fruit.routing_number}</p>
-    let account_number = this.state.editable ? <input type='text' ref={input => this.account_number = input} defaultValue={this.props.fruit.account_number}/>:<p>{this.props.fruit.account_number}</p>
-
-
-
-
-
-
-
+    let bank_nickname = this.state.editable ? <input type='text' ref={input => this.bank_nickname = input} defaultValue={this.props.account.bank_nickname}/>:<h3>{this.props.account.bank_nickname}</h3>
+    let bank_address = this.state.editable ? <input type='text' ref={input => this.bank_address = input} defaultValue={this.props.account.bank_address}/>:<p>{this.props.account.bank_address}</p>
+    let routing_number = this.state.editable ? <input type='text' ref={input => this.routing_number = input} defaultValue={this.props.account.routing_number}/>:<p>{this.props.account.routing_number}</p>
+    let account_number = this.state.editable ? <input type='text' ref={input => this.account_number = input} defaultValue={this.props.account.account_number}/>:<p>{this.props.account.account_number}</p>
+    
     return(
       <div>
         {bank_nickname}
