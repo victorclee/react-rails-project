@@ -9,7 +9,31 @@ constructor(props) {
     this.addNewAccount = this.addNewAccount.bind(this)
     this.handleDelete = this.handleDelete.bind(this)
     this.deleteAccount = this.deleteAccount.bind(this)
+    this.handleUpdate = this.handleUpdate.bind(this);
+    this.updateAccount = this.updateAccount.bind(this) 
   }
+
+
+
+  handleUpdate(account){
+    fetch(`http://localhost:3000/api/v1/accounts/${account.id}`, 
+    {
+      method: 'PUT',
+      body: JSON.stringify({account: account}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then((response) => { 
+        this.updateAccount(account)
+      })
+  }
+  updateAccount(account){
+    let newAccounts = this.state.accounts.filter((f) => f.id !== account.id)
+    newAccounts.push(account)
+    this.setState({
+      accounts: newAccounts
+    })
+  }  
 
   handleDelete(id){
     fetch(`http://localhost:3000/api/v1/accounts/${id}`, 
@@ -68,8 +92,12 @@ render(){
     return(
       <div>
         <NewAccount handleFormSubmit={this.handleFormSubmit}/>
-        <AllAccounts accounts={this.state.accounts} handleDelete={this.handleDelete}/>
+        <AllAccounts accounts={this.state.accounts} handleDelete={this.handleDelete} handleUpdate = {this.handleUpdate}/>
       </div>
     )
   }
 }
+
+
+
+
