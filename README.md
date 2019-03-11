@@ -18,15 +18,13 @@ https://github.com/reactjs/react-rails
 ## Deployment instructions
 Download code at https://github.com/victorclee/avail-project
 
-run `bundle`
+`bundle`
 
-### Database creation
 `rake db:create`
 
-### Database initialization
 `rake db:migrate`
 
-run `rails s` locally
+`rails s`
 
 ## Current state of the app (completed features)
 The user is able to Create, Read, Update, and Delete a bank account to the Rails API through a React frontend. All four fields of the bank account (routing number, account number, bank address, and bank nickname) have `presence: true` validations. 
