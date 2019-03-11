@@ -15,7 +15,7 @@ https://github.com/plataformatec/responders
 
 https://github.com/reactjs/react-rails
 
-## Deployment instructions
+## Instructions on how to run the app locally
 Download code at https://github.com/victorclee/avail-project
 
 `bundle`
