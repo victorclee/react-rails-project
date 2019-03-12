@@ -16,7 +16,7 @@ https://github.com/plataformatec/responders
 https://github.com/reactjs/react-rails
 
 ## Instructions on how to run the app locally
-Download code at https://github.com/victorclee/avail-project
+Download code at https://github.com/victorclee/react-rails-project
 
 `bundle`
 
@@ -43,10 +43,7 @@ Stateful vs Stateless
 ## Items still to complete on this project
 Routing number validation. All the fields have validations for `presence: true`. I have attempted to build a custom validator for the routing number (as you can see in my commented out code in `accounts.rb`) but have yet to complete it. 
 
-HTML and CSS. I have focused my efforts in learning and using React, so the layout is really bare-boned.
-
-# Takeaway
-Although I wasn't able to bring this project to full completion in given time, I am very happy that I got to learn React, and built a simple but functioning CRUD interface. Excited to learn more!
+HTML and CSS.
 
 ## Super useful resources throughout this project:
 
